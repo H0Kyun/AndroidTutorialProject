@@ -14,4 +14,7 @@
     <string name="third_quadrant_description">A layout composable that places its children in a horizontal sequence.</string>
     <string name="forth_quadrant_title">Column composable</string>
     <string name="forth_quadrant_description">A layout composable that places its children in a vertical sequence.</string>
+    <string name="phone_number">010-XXXX-XXXX</string>
+    <string name="email">h0kyungim@gmail.com</string>
+    <string name="share_text">\@H0kyun</string>
 </resources>
