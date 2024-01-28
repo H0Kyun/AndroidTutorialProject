@@ -1,4 +1,4 @@
-package com.example.tutorialapplication
+package com.example.tutorialapplication.chapter1
 
 open class Derived(override val mutableProperty: Int = 10) : Base(mutableProperty) {
     final override fun canOverride() {

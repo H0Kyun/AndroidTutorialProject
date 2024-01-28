@@ -1,4 +1,4 @@
-package com.example.tutorialapplication
+package com.example.tutorialapplication.chapter1
 
 open class Base(open val mutableProperty: Int) {
 

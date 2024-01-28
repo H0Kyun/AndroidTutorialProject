@@ -1,4 +1,4 @@
-package com.example.tutorialapplication
+package com.example.tutorialapplication.chapter1
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -17,6 +17,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.tutorialapplication.R
 import com.example.tutorialapplication.ui.theme.TutorialApplicationTheme
 
 class LearnTogetherActivity : ComponentActivity() {

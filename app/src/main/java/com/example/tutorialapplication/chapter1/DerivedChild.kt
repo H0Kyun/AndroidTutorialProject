@@ -1,4 +1,4 @@
-package com.example.tutorialapplication
+package com.example.tutorialapplication.chapter1
 
 class DerivedChild : Derived() {
 
