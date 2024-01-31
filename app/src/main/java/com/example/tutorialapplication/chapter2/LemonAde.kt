@@ -71,8 +71,14 @@ fun LemonAdeRecipe(modifier: Modifier = Modifier) {
     ) {
         Button(
             onClick = {
-                // 1. 1,3,4 단계는 다음 단계로 넘어감
-                // 2. 2 단계는 squeezeTime 랜덤 설정
+                if (step == 2 && squeezeTime > 0) {
+                    --squeezeTime
+                } else {
+                    if(step == 1) {
+                        squeezeTime = (2..4).random()
+                    }
+                    if (step > 3) step = 1 else ++step
+                }
             },
             shape = CircleShape
         ) {
