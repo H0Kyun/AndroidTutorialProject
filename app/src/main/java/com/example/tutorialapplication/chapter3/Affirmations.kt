@@ -62,7 +62,7 @@ class Affirmations : ComponentActivity() {
 @Composable
 fun AffirmationsApp() {
     AffirmationList(
-        affirmationList = Datasource().loadAffirmations(),
+        affirmationList = Datasource.loadAffirmations(),
     )
 }
 
