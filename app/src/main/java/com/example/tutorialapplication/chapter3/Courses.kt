@@ -56,7 +56,7 @@ fun CourseApp() {
 }
 
 @Composable
-fun CourseList(topicList: List<Topic>, modifier: Modifier = Modifier) {
+fun CourseList(topicList: List<Topic>) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         verticalArrangement = Arrangement.spacedBy(8.dp),
