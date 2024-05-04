@@ -46,3 +46,4 @@ google-services.json
 .externalNativeBuild
 .cxx
 local.properties
+/app/src/main/res/font
