@@ -44,6 +44,9 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    dataBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -59,13 +62,12 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.3.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.activity:activity:$activity_version")
+    implementation("androidx.activity:activity-ktx:$activity_version")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2025.01.00"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.6")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.7")
     implementation("androidx.compose.material:material-icons-extended")
 }
