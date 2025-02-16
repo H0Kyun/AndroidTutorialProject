@@ -1,5 +1,6 @@
 package com.example.tutorialapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
 
             Handler(Looper.getMainLooper()).postDelayed({ canClose = false }, 500)
 
-            Toast.makeText(this@MainActivity, "한 번 더 누르시게", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, "한 번 더 누르면 종료함 ㅅㄱ", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -37,6 +38,12 @@ class MainActivity : ComponentActivity() {
         }
 
         val adaptor = DayGridAdaptor(list)
+        adaptor.diarySection = findViewById(R.id.diary_section)
+        adaptor.diarySection.setOnClickListener {
+            val intent = Intent(this, DiaryActivity::class.java)
+            intent.putExtra("text", adaptor.diarySection.text)
+            startActivity(intent)
+        }
 
         val recycleGrid = findViewById<RecyclerView>(R.id.date_grid)
         recycleGrid.adapter = adaptor

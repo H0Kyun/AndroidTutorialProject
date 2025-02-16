@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tutorialapplication.R
 
 class DayGridAdaptor (private val dataSet: MutableList<String>): RecyclerView.Adapter<DayGridAdaptor.ViewHolder>() {
-    class ViewHolder(view: View, parentWidth: Int): RecyclerView.ViewHolder(view) {
+    lateinit var diarySection: TextView
+
+    inner class ViewHolder(view: View, parentWidth: Int): RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.date_item)
 
         init {
@@ -27,6 +29,10 @@ class DayGridAdaptor (private val dataSet: MutableList<String>): RecyclerView.Ad
         val index = position + 1
 
         holder.textView.text = "$index"
+        holder.textView.setOnClickListener {
+            diarySection.text = holder.textView.text
+        }
+
     }
 
     override fun getItemCount(): Int {
