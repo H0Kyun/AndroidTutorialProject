@@ -1,5 +1,6 @@
 package com.example.tutorialapplication.adaptor
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,8 +20,7 @@ class DayGridAdaptor (private val dataSet: MutableList<String>): RecyclerView.Ad
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.date_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.date_item, parent, false)
 
         return ViewHolder(view, parent.width)
     }

@@ -1,16 +1,13 @@
 package com.example.tutorialapplication
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
-import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
-import androidx.recyclerview.widget.RecyclerView
-import com.example.tutorialapplication.adaptor.DayGridAdaptor
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
 
     private var canClose = false
 
@@ -30,23 +27,8 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
-
-        val list: MutableList<String> = arrayListOf()
-        for (i: Int in 1..30 ) {
-            list.add("$i")
-        }
-
-        val adaptor = DayGridAdaptor(list)
-        adaptor.diarySection = findViewById(R.id.diary_section)
-        adaptor.diarySection.setOnClickListener {
-            val intent = Intent(this, DiaryActivity::class.java)
-            intent.putExtra("text", adaptor.diarySection.text)
-            startActivity(intent)
-        }
-
-        val recycleGrid = findViewById<RecyclerView>(R.id.date_grid)
-        recycleGrid.adapter = adaptor
 
         onBackPressedDispatcher.addCallback(callback)
 

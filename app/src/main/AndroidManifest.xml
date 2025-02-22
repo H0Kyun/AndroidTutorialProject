@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TutorialApplication"
+        android:theme="@style/Theme.AppCompat.TutorialApplication"
         tools:targetApi="31">
         <activity
             android:name=".DiaryActivity"
@@ -19,7 +19,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.TutorialApplication">
+            android:theme="@style/Theme.AppCompat.TutorialApplication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
