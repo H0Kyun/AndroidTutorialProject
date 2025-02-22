@@ -70,6 +70,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.7")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.8")
     implementation("androidx.compose.material:material-icons-extended")
 }
