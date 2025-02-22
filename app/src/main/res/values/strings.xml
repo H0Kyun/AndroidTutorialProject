@@ -15,8 +15,5 @@
   -->
 <resources>
     <string name="app_name">AndroidTutorialProject</string>
-    <string name="first">1ST</string>
-    <string name="second">2ST</string>
-    <string name="first_text">First Text</string>
-    <string name="second_text">Second Text</string>
+    <string name="hello_blank_fragment">Hello!</string>
 </resources>

@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tutorialapplication.DiaryActivity
 import com.example.tutorialapplication.R
 import com.example.tutorialapplication.adaptor.DayGridAdaptor
 
