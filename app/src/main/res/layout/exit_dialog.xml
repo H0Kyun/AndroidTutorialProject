@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="@string/do_you_want_exit"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    <TableRow style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/exit_no"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="@string/no"
+            android:layout_weight="1"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/exit_yes"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="@string/yes"
+            android:layout_weight="1"
+            android:padding="10dp" />
+    </TableRow>
+
+
+</LinearLayout>

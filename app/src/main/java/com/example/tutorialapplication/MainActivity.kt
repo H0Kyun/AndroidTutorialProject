@@ -1,27 +1,26 @@
 package com.example.tutorialapplication
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.widget.Toast
+import android.view.LayoutInflater
+import android.widget.Button
 import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private var canClose = false
-
     private val callback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            if (canClose) {
+            val exitDialogLayout = LayoutInflater.from(this@MainActivity).inflate(R.layout.exit_dialog, null)
+            val alter = AlertDialog.Builder(this@MainActivity).setView(exitDialogLayout)
+            val exitDialog = alter.show()
+
+            exitDialog.findViewById<Button>(R.id.exit_no)?.setOnClickListener {
+                exitDialog.onBackPressed()
+            }
+            exitDialog.findViewById<Button>(R.id.exit_yes)?.setOnClickListener {
                 finish()
             }
-
-            canClose = true
-
-            Handler(Looper.getMainLooper()).postDelayed({ canClose = false }, 500)
-
-            Toast.makeText(this@MainActivity, "한 번 더 누르면 종료함 ㅅㄱ", Toast.LENGTH_SHORT).show()
         }
     }
 

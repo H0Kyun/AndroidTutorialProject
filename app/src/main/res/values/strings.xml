@@ -16,4 +16,7 @@
 <resources>
     <string name="app_name">AndroidTutorialProject</string>
     <string name="hello_blank_fragment">Hello!</string>
+    <string name="do_you_want_exit">종료하시겠습니까?</string>
+    <string name="no">no</string>
+    <string name="yes">yes</string>
 </resources>
